@@ -1,0 +1,22 @@
+<div style="border: 2px solid blue; padding: 20px; margin-bottom: 20px; border-radius: 8px;">
+  <h2>Parent Component</h2>
+
+  <!-- Input Field -->
+  <input type="text" #msgInput placeholder="Enter a message..." style="padding: 5px; width: 250px;" />
+  
+  <br><br>
+
+  <!-- Buttons trigger service methods -->
+  <button (click)="sendSubject(msgInput.value)" style="margin-right: 10px; padding: 5px 10px; cursor: pointer;">
+    Send via Subject
+  </button>
+
+  <button (click)="sendBehaviorSubject(msgInput.value)" style="padding: 5px 10px; cursor: pointer;">
+    Send via BehaviorSubject
+  </button>
+  
+  <hr />
+
+  <!-- The Child Component is nested inside the Parent Component -->
+  <app-child></app-child>
+</div>
